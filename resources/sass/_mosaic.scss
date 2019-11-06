@@ -1,0 +1,76 @@
+.mosaic {
+    display: flex;
+
+    &__row {
+        flex-basis: 33%;
+        flex-grow: 0;
+        flex-shrink: 0;
+
+    }
+
+    .tile {
+        display: block;
+        position: relative;
+        padding: 4px;
+
+
+        .photo {
+            width: 100%;
+            transition: all 0.2s;
+        }
+
+        &__info {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.3s ease-in, opacity 0.7s ease-in-out;
+            color: white;
+            top: 0;
+            left: 0;
+            position: absolute;
+            opacity: 0;
+            transform: translateY(-20px);
+
+            .topLeft {
+                position: absolute;
+                left: 10px;
+                top: 10px
+            }
+
+            .topRight {
+                position: absolute;
+                right: 10px;
+                top: 10px
+            }
+
+            .bottomLeft {
+                position: absolute;
+                left: 10px;
+                bottom: 10px
+            }
+        }
+
+        &:hover {
+            .tile__info {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+
+            .photo {
+                filter: blur(1px) brightness(40%);
+            }
+        }
+    }
+
+
+
+}
+
+
+.watermark{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    z-index: 1;
+    width: 60px;
+    height: 30px;
+}

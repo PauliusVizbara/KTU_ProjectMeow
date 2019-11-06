@@ -1,0 +1,65 @@
+.animal-view{
+    * {
+        color: #eee;
+    }
+        img{
+        max-width: 100%;
+    }
+    display: flex;
+    &__image, &__info{
+        flex-basis: 50%;
+    }
+    &__info{
+        padding: 20px;
+    }
+   &__image{
+       flex-basis: auto;
+       position: relative;
+   }
+
+}
+
+.single-view{
+    * {
+        color: #eee;
+    }
+}
+.comment__form{
+    * {
+        color: #eee;
+    }
+}
+
+.actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+
+.user_messages{
+    position: relative;
+    i{
+        cursor: pointer;
+    }
+    .messages{
+        position: absolute;
+        top: 30px;
+        background: rgba(0,0,0,0.7);
+        z-index: 5;
+          padding: 10px;
+        right: 0;
+        width: 200px;
+        min-height: 300px;
+        display: none;
+    }
+    &.active{
+        .messages{
+            display: block;
+            * {
+                color: white;
+                font-size: 16px;
+            }
+        }
+    }
+}
